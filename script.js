@@ -1,7 +1,12 @@
-// THIS IS CURRENT TIME FORMAT AND LOGS EXACT TIME (D,M,D,Y,T)
+// VARIABLE REPRESENTS CURRENT TIME AND LOGS EXACT TIME FORMAT (D,M,D,Y,T)
 let currentTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 console.log(currentTime);
 
-$(document).ready(function () {
-  currentTime;
-});
+function displayCurrentTime() {
+  document.getElementById("currentDay").innerHTML = currentTime;
+}
+displayCurrentTime();
+
+// $(document).ready(function () {
+//   currentTime;
+// });
