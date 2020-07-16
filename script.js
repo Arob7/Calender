@@ -10,19 +10,30 @@ displayCurrentTime();
 
 //
 $(document).ready(function () {
+  $("#hour9 + .info").val(localStorage.getItem("hour9"));
+  $("#hour10 .info").val(localStorage.getItem("hour10"));
+  $("#hour11 .info").val(localStorage.getItem("hour11"));
+  $("#hour12 .info").val(localStorage.getItem("hour12"));
+  $("#hour1 .info").val(localStorage.getItem("hour1"));
+  $("#hour2 .info").val(localStorage.getItem("hour2"));
+  $("#hour3 .info").val(localStorage.getItem("hour3"));
+  $("#hour4 .info").val(localStorage.getItem("hour4"));
+  $("#hour5 .info").val(localStorage.getItem("hour5"));
+
   $(".save-btn").on("click", function () {
     // THIS WILL GRAB THE CURRENT HOUR
     let time = $(this).parent().attr("id");
-    console.log(time);
 
     // THIS WILL GRAB THE INPUT VALUE
     let input = $(this).parent().siblings(".info").val();
+    console.log(time);
     console.log(input);
 
-    // STORES DATA FROM INPUT
+    // SHOULD STORE DATA FROM INPUT
     localStorage.setItem(time, input);
-    console.log(time, input);
 
-    localStorage.getItem(".save-btn");
+    // var hourData = localStorage.getItem(time);
+
+    // console.log("Hour data: " + hourData);
   });
 });
