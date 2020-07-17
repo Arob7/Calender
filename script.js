@@ -10,16 +10,32 @@ displayCurrentTime();
 
 //
 $(document).ready(function () {
-  $("#hour9 + .info").val(localStorage.getItem("hour9"));
-  $("#hour10 .info").val(localStorage.getItem("hour10"));
-  $("#hour11 .info").val(localStorage.getItem("hour11"));
-  $("#hour12 .info").val(localStorage.getItem("hour12"));
-  $("#hour1 .info").val(localStorage.getItem("hour1"));
-  $("#hour2 .info").val(localStorage.getItem("hour2"));
-  $("#hour3 .info").val(localStorage.getItem("hour3"));
-  $("#hour4 .info").val(localStorage.getItem("hour4"));
-  $("#hour5 .info").val(localStorage.getItem("hour5"));
+  $("#hour9").siblings(".info").val(localStorage.getItem("hour9"));
+  $("#hour10").siblings(".info").val(localStorage.getItem("hour10"));
+  $("#hour11").siblings(".info").val(localStorage.getItem("hour11"));
+  $("#hour12").siblings(".info").val(localStorage.getItem("hour12"));
+  $("#hour1 ").siblings(".info").val(localStorage.getItem("hour1"));
+  $("#hour2 ").siblings(".info").val(localStorage.getItem("hour2"));
+  $("#hour3 ").siblings(".info").val(localStorage.getItem("hour3"));
+  $("#hour4 ").siblings(".info").val(localStorage.getItem("hour4"));
+  $("#hour5 ").siblings(".info").val(localStorage.getItem("hour5"));
 
+  var hours = [
+    "#hour9",
+    "#hour10",
+    "#hour11",
+    "#hour12",
+    "#hour1 ",
+    "#hour2 ",
+    "#hour3 ",
+    "#hour4 ",
+    "#hour5 ",
+  ];
+
+  for (var i = 0; i < hours.length; i++) {
+    var time = hours[i].split("#hour");
+    console.log(time);
+  }
   $(".save-btn").on("click", function () {
     // THIS WILL GRAB THE CURRENT HOUR
     let time = $(this).parent().attr("id");
