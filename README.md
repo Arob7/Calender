@@ -4,4 +4,4 @@ This app will run in the browser and feature dynamically updated HTML and CSS po
 
 A link to the app: https://arob7.github.io/Daily-Planner/
 
-A screenshot: <img src="/images/screenshot.PNG" width="500">
+A screenshot: <img src="images/screenshot.PNG" width="500">
